@@ -1,0 +1,50 @@
+<!-- ==========================================================
+ 
+       MTConnect Device file for a DS18B20 temperature sensor
+       (c) Rolf Wuthrich
+           2022 Concordia University
+
+     ========================================================== -->
+
+<MTConnectDevices>
+  <Devices>
+    <Device uuid="DS18B20-001" id="ds18b20_1" name="DS18B20-1">
+
+      <!-- General information -->
+      <Description>
+         DS18B20 Temperature Sensor
+      </Description>
+      <DataItems>
+        <DataItem category="EVENT" id="avail" type="AVAILABILITY"/>
+        <DataItem category="EVENT" id="operator" subType="OPERATOR" type="USER"/>
+      </DataItems>
+
+      <!-- Components -->
+      <Components>
+
+        <!-- Sensor -->
+        <Sensor id="ds18b20_sensor">
+
+          <!-- Configuration -->
+          <Configuration>
+            <SensorConfiguration>
+              <FirmwareVersion>2.34</FirmwareVersion>
+              <Channels>
+                 <Channel number="1" name="Temp">
+                   <Description>Temperature in Celcius</Description>
+                 </Channel>
+              </Channels>
+            </SensorConfiguration>
+          </Configuration>
+
+          <!-- DataItems -->
+          <DataItems>
+            <DataItem category="SAMPLE" id="Temp" type="TEMPERATURE" units="CELCIUS"/>
+          </DataItems>
+
+        </Sensor>
+
+      </Components>
+    </Device>
+  </Devices>
+</MTConnectDevices>
