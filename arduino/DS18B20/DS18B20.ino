@@ -13,7 +13,7 @@
 // --------------------------------------------------------------- 
 
 // Demonstrates how to setup an MTConnect Adapter which
-// reads the temperaure from a DS18B20 Temperature Sensor
+// reads the temperature from a DS18B20 Temperature Sensor
 //
 // The adapter sends SHDR format on the serial port
 // The adapter assumes the following configuration 
@@ -23,7 +23,7 @@
 //
 //
 // Required libraries :
-// (all availables via Sketch > Include Library > Manage Libraries)
+// (available via Sketch > Include Library > Manage Libraries)
 //
 // - OneWire library by Paul Stoffregen
 //   https://github.com/PaulStoffregen/OneWire
@@ -42,7 +42,7 @@ const int oneWireBus = 4;
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(oneWireBus);
 
-// Pass our oneWire reference to Dallas Temperature sensor 
+// Pass oneWire reference to Dallas Temperature sensor 
 DallasTemperature sensors(&oneWire);
 
 // Global temperature variable
@@ -56,8 +56,10 @@ void sendSHDR(float temp)
 }
 
 void setup() {
+  
   // Start the Serial Monitor
   Serial.begin(115200);
+  
   // Start the DS18B20 sensor
   sensors.begin();
   tempOld = 0.0;
