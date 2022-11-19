@@ -7,7 +7,7 @@ not capable of sending TCP/IP data to an MTConnect Agent.
 The MTCAdapterRelay is a small Python library desinged to work together with the [MTConnect cpp agent](https://github.com/mtconnect/cppagent).
 
 ## Usage
-Two classes need to be define: an MTCAdapterRelayHandler class and a MTCAdapterRelay.
+Two classes need to be defined: an MTCAdapterRelayHandler class and a MTCAdapterRelay.
 
 ### MTCAdapterRelayHandler
 The MTCAdapterRelayHandler is responsible to define the proper parameters for communicating with the
