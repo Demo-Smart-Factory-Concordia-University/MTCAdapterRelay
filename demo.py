@@ -13,8 +13,8 @@ class DS18B20_MTCAdapterRelay(MTCAdapterRelay):
     deviceHandler_class = DS18B20_MTCAdapterRelayHandler
 
     
-myServer = DS18B20_MTCAdapterRelay()
+myAdapter = DS18B20_MTCAdapterRelay()
 try:
-    myServer.serve_forever()
+    myAdapter.serve_forever()
 except KeyboardInterrupt:
     sys.exit(0)
