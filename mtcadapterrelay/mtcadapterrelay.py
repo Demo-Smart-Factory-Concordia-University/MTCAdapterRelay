@@ -50,8 +50,8 @@ class MTCAdapterRelayHandler(socketserver.BaseRequestHandler):
                 if ser.inWaiting() > 0:
                     # strip possible "\n"
                     shdr = ser.readline().decode('utf-8').strip()
-                    self.sendSHDR(shdr)
-                    self.request.sendall((shdr+"\n").encode())
+                    print(shdr)
+                    self.request.sendall((shdr + "\n").encode())
                 continue
                 
             if not data:
@@ -71,11 +71,6 @@ class MTCAdapterRelayHandler(socketserver.BaseRequestHandler):
         ser.stopbits = self.stopbits
         ser.timeout = self.ser_timeout
         return ser
-    
-    
-    def sendSHDR(self, shdr):
-        """ Sends SHDR to MTConnect agent """
-        print(shdr)
         
 
 class MTCAdapterRelay(socketserver.TCPServer):
