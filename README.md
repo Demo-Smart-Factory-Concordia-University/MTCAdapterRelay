@@ -34,7 +34,9 @@ The attribute `deviceHandler_class` must contain the MTCAdapterRelayHandler clas
 serial port paramters to communicate with the device.
 
 ### Example
-A typical example looks like this:
+A typical example looks like this 
+(this is an example for a temperature sensor connected via an Arduino type device.
+The Arduino sketch is availble [here](/arduino)):
 ```
 from mtcadapterrelay import MTCAdapterRelay, MTCAdapterRelayHandler
 import sys
