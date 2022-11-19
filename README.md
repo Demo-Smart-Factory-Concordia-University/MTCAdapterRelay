@@ -4,7 +4,7 @@ MTConnect Adapter acting as a relay for a physical device (e.g. a sensor) sendin
 The MTCAdapterReay allows to hock up a device capable of sending SHDR data on the serial port but
 not capable of sending TCP/IP data to an MTConnect Agent.
 
-The MTCAdapterRelay is desinged to work together with the [MTConnect cpp agent](https://github.com/mtconnect/cppagent).
+The MTCAdapterRelay is a small Python library desinged to work together with the [MTConnect cpp agent](https://github.com/mtconnect/cppagent).
 
 ## Usage
 Two classes need to be define: an MTCAdapterRelayHandler class and a MTCAdapterRelay.
