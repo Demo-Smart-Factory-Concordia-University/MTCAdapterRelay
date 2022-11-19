@@ -39,9 +39,16 @@ A typical example looks like this:
 from mtcadapterrelay import MTCAdapterRelay, MTCAdapterRelayHandler
 import sys
 
+
 class DS18B20_MTCAdapterRelayHandler(MTCAdapterRelayHandler):
     
     serial_port = '/dev/ttyUSB1'
+    serial_port = None
+    baudrate = 115200
+    parity = serial.PARITY_NONE
+    bytesize = serial.EIGHTBITS
+    stopbits = serial.STOPBITS_ONE
+
 
 class DS18B20_MTCAdapterRelay(MTCAdapterRelay):
     
