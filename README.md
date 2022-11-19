@@ -1,5 +1,5 @@
 # MTCAdapterRelay
-MTConnect Adapter acting as a relay for a device sending SHDR data on serial port.
+MTConnect Adapter acting as a relay for a physical device (e.g. a sensor) sending SHDR data on the serial port.
 
 The MTCAdapterReay allows to hock up a device capable of sending SHDR data on the serial port but
 not capable of sending TCP/IP data to an MTConnect Agent.
