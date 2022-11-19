@@ -43,7 +43,6 @@ import sys
 class DS18B20_MTCAdapterRelayHandler(MTCAdapterRelayHandler):
     
     serial_port = '/dev/ttyUSB1'
-    serial_port = None
     baudrate = 115200
     parity = serial.PARITY_NONE
     bytesize = serial.EIGHTBITS
