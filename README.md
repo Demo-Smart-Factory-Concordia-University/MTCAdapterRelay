@@ -7,10 +7,10 @@ not capable of sending TCP/IP data to an MTConnect Agent.
 The MTCAdapterRelay is a small Python library desinged to work together with the [MTConnect cpp agent](https://github.com/mtconnect/cppagent).
 
 ## Usage
-Two classes need to be defined: an MTCAdapterRelayHandler class and a MTCAdapterRelay.
+Two classes need to be defined: an `MTCAdapterRelayHandler` and a `MTCAdapterRelay` class.
 
 ### MTCAdapterRelayHandler
-The MTCAdapterRelayHandler is responsible to define the proper parameters for communicating with the
+The `MTCAdapterRelayHandler` is responsible to define the proper parameters for communicating with the
 device over the serial port.
 
 At minimum the 'serial_port' attribute must be defined. It is the name of the Linux device file
@@ -25,12 +25,12 @@ stopbits = serial.STOPBITS_ONE
 ```
 
 ### MTCAdapterRelay
-The MTCAdapterRelay is a specialized TCP/IP server which implements the PING/PONG hearthbeat convention of 
+The `MTCAdapterRelay` class is a specialized TCP/IP server which implements the PING/PONG hearthbeat convention of 
 the [MTConnect cpp agent](https://github.com/mtconnect/cppagent).
 
 The attribute `adapter_port` (default value 7878) holds the port number on which the adapter relay will run.
 
-The attribute `deviceHandler_class` must contain the MTCAdapterRelayHandler class defining the correct
+The attribute `deviceHandler_class` must contain the `MTCAdapterRelayHandler` class defining the correct
 serial port paramters to communicate with the device.
 
 ### Example
